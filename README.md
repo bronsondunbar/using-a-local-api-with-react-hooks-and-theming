@@ -1,4 +1,4 @@
-# react-with-server
+# React With Dummy REST API
 
 https://github.com/typicode/json-server
 
