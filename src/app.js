@@ -1,4 +1,9 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
+import { ThemeProvider } from '@xstyled/styled-components'
+
+import theme from './theme'
+
+import { Header } from './components/index'
 
 class App extends Component {
   async componentDidMount () {
@@ -13,11 +18,15 @@ class App extends Component {
 
   render () {
     return (
-      <div className="container">
-        <h1>React With Dummy REST API</h1>
-      </div>
+      <ThemeProvider theme={theme}>
+        <div className="container">
+          <Header>
+            <h1>React With Dummy REST API</h1>
+          </Header>
+        </div>
+      </ThemeProvider>
     )
   }
 }
 
-export default App;
+export default App
