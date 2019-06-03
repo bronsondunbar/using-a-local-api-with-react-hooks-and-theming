@@ -18,3 +18,17 @@ h1 {
 	font-size: 4em;
 
 }
+
+a {
+
+	color: #3ba30d;
+	transition: all 0.3s;
+
+}
+
+a:hover, a:focus {
+
+	color: #262626;
+	text-decoration: none;
+
+}
