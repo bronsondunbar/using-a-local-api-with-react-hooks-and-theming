@@ -11,9 +11,6 @@ const theme = (theme) => {
 		  radii: {
 		  	defaultRadius: '.25rem'
 		  },
-		  paddings: {
-		  	defaultPadding: '.375rem .75rem'
-		  },
 		  transitions: {
 		  	fastTransition: 'all 0.3s'
 		  }

@@ -1,5 +1,5 @@
 {
-  "name": "react-with-dummy-rest-api",
+  "name": "react-with-fake-rest-api",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

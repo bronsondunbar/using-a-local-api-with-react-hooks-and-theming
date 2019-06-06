@@ -13,7 +13,7 @@ const Button = styled.button`
         vertical-align: middle;
         user-select: none;
         background-color: primaryColor;
-        padding: defaultPadding;
+        padding: .375rem .75rem;
         font-size: 1rem;
         line-height: 1.5;
         border-radius: defaultRadius;
