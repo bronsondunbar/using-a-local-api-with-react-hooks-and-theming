@@ -10,9 +10,6 @@ const theme = (theme) => {
 		  },
 		  radii: {
 		  	defaultRadius: '.25rem'
-		  },
-		  transitions: {
-		  	fastTransition: 'all 0.3s'
 		  }
 		}
 	)

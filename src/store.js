@@ -14,6 +14,16 @@ function reducer(state, action) {
       return { ...state, selectedTheme: action.payload }
     case 'FETCH_DATA':
       return { ...state, posts: action.payload }
+    case 'ADD_FAV':
+		  return {
+		    ...state,
+		    favourites: [...state.favourites, action.payload]
+		  }
+		case 'REMOVE_FAV':
+		  return {
+		    ...state,
+		    favourites: action.payload
+			}
     default:
       return state;
   }

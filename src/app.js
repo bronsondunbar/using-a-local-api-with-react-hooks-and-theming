@@ -1,10 +1,13 @@
-import React, { Fragment, useEffect } from 'react';
+import React, { useEffect, lazy, Suspense } from 'react'
+import { Link } from '@reach/router'
 import { ThemeProvider } from '@xstyled/styled-components'
 
 import { Header, Card, Button } from './components/index'
 
 import theme from './theme'
-import { Store } from './store';
+import { Store } from './store'
+
+const PostsList = lazy(() => import('./postsList'))
 
 export default function App() {
   const { state, dispatch } = React.useContext(Store)
@@ -30,6 +33,22 @@ export default function App() {
     })
   }
 
+  const toggleFavourite = post => {
+    const postInFavourites = state.favourites.includes(post);
+    let dispatchObj = {
+      type: 'ADD_FAV',
+      payload: post
+    }
+    if (postInFavourites) {
+      const favouritesWithoutPost = state.favourites.filter(fav => fav.id !== post.id)
+      dispatchObj = {
+        type: 'REMOVE_FAV',
+        payload: favouritesWithoutPost
+      }
+    }
+    return dispatch(dispatchObj)
+  }
+
   const updateTheme = () => {
     return dispatch({
       type: 'UPDATE_THEME',
@@ -37,45 +56,40 @@ export default function App() {
     })
   }
 
-  console.log(state.posts)
+  const props = {
+    posts: state.posts,
+    toggleFavourite: toggleFavourite,
+    favourites: state.favourites
+  }
 
   return (
     <ThemeProvider theme={theme(state.selectedTheme)}>
-      <div className="container">
-        <Header>
-          <h1>React With Fake REST API & Data</h1>
+      <Suspense fallback={<div>Loading...</div>}>
+        <div className="container">
+          <Header>
+            <h1><Link to='/'>React App With Fake REST API</Link></h1>
 
-          <Button
-            onClick={updateTheme}>
-            Change {state.selectedTheme}
-          </Button>
+            <Button
+              onClick={updateTheme}>
+              Change Theme {state.selectedTheme}
+            </Button>
 
-          <Card>
-            <div className="card-body">
-              <p>A Create React App with a fake API for data that uses <a href="https://github.com/typicode/json-server" rel="noopener noreferrer" target="_blank">JSON server</a>.</p>
-            </div>
-          </Card>
-        </Header>
+            <Link to='/favs'>
+              Favourites
+            </Link>
 
-        <div className="row">
-          {state.posts.length > 0 && state.posts.map((post, index) => {
-            return (
-              <div
-                key={index}
-                className="col">
-                <Card>
-                  <img src={post.image} className="card-img-top" alt={post.title} />
-                  <div className="card-body">
-                    <h4>{post.title}</h4>
-                    <p>{post.description}</p>
-                    <p>({post.comments.length}) Comment(s)</p>
-                  </div>
-                </Card>
+            <Card>
+              <div className="card-body">
+                <p>This example uses a fake API to get data using <a href="https://github.com/typicode/json-server" rel="noopener noreferrer" target="_blank">JSON server</a>.</p>
+
+                <p>It also uses React Hooks & xstyled for theming.</p>
               </div>
-            )
-          })}
+            </Card>
+          </Header>
+
+          <PostsList {...props} />
         </div>
-      </div>
+      </Suspense>
     </ThemeProvider>
   )
 }

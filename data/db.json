@@ -20,6 +20,13 @@
       "image": "https://via.placeholder.com/500/262626/fff",
       "description": "Vivamus gravida quam pretium sapien ultricies vehicula. Nullam tristique consequat augue, et venenatis augue efficitur ut. Nunc sed luctus mauris.",
       "author": "typicode"
+    },
+    {
+      "id": 4,
+      "title": "Post 4",
+      "image": "https://via.placeholder.com/500/262626/fff",
+      "description": "Vivamus gravida quam pretium sapien ultricies vehicula. Nullam tristique consequat augue, et venenatis augue efficitur ut. Nunc sed luctus mauris.",
+      "author": "typicode"
     }
   ],
   "comments": [
@@ -27,11 +34,6 @@
       "id": 1,
       "body": "Comment 1",
       "postId": 1
-    },
-    {
-      "id": 2,
-      "body": "Comment 2",
-      "postId": 2
     },
     {
       "id": 3,

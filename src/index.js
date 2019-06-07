@@ -1,7 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import { Router } from '@reach/router'
 
 import App from './app'
+import FavouritesList from './favouritesList'
+
 import * as serviceWorker from './serviceWorker'
 import { StoreProvider } from './store'
 
@@ -10,7 +13,10 @@ import './style.css'
 
 ReactDOM.render(
 	<StoreProvider>
-		<App />
+		<Router>
+			<App path='/' />
+				<FavouritesList path='/favs' />
+		</Router>
 	</StoreProvider>,
 	document.getElementById('app')
 );

@@ -14,6 +14,7 @@ const Button = styled.button`
         user-select: none;
         background-color: primaryColor;
         padding: .375rem .75rem;
+        margin: 15px 0;
         font-size: 1rem;
         line-height: 1.5;
         border-radius: defaultRadius;
