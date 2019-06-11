@@ -11,13 +11,13 @@ export default function FavouritesList() {
   const toggleFavourite = post => {
     const postInFavourites = state.favourites.includes(post)
     let dispatchObj = {
-      type: 'ADD_FAV',
+      type: "ADD_FAV",
       payload: post
     }
     if (postInFavourites) {
       const favouritesWithoutPost = state.favourites.filter(fav => fav.id !== post.id)
       dispatchObj = {
-        type: 'REMOVE_FAV',
+        type: "REMOVE_FAV",
         payload: favouritesWithoutPost
       }
     }

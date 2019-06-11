@@ -4,6 +4,7 @@ export const Store = React.createContext()
 
 const initialState = {
   posts: [],
+  post: [],
   favourites: [],
   selectedTheme: 'default'
 }
@@ -12,8 +13,13 @@ function reducer(state, action) {
   switch (action.type) {
   	case 'UPDATE_THEME':
       return { ...state, selectedTheme: action.payload }
-    case 'FETCH_DATA':
+    case 'GET_POSTS':
       return { ...state, posts: action.payload }
+    case 'GET_POST':
+      return {
+        ...state,
+        post: [action.payload]
+      }
     case 'ADD_FAV':
 		  return {
 		    ...state,

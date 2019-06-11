@@ -3,30 +3,103 @@
     {
       "id": 1,
       "image": "https://via.placeholder.com/500/262626/fff",
-      "description": "Vivamus gravida quam pretium sapien ultricies vehicula. Nullam tristique consequat augue, et venenatis augue efficitur ut. Nunc sed luctus mauris.",
       "title": "Post 1",
-      "author": "typicode"
+      "description": "Vivamus gravida quam pretium sapien ultricies vehicula. Nullam tristique consequat augue, et venenatis augue efficitur ut. Nunc sed luctus mauris.",
+      "contents": [
+        {
+          "type": "text",
+          "style": "none",
+          "content": "Integer condimentum vel nunc vel dictum. Etiam ullamcorper mi ligula, ut finibus tellus rutrum a. Phasellus faucibus elementum porttitor. Etiam tempor elit id tellus hendrerit, in aliquam nulla scelerisque. Curabitur ligula nibh, lacinia a ullamcorper id, venenatis sit amet nunc. In non orci sed lorem condimentum facilisis. Morbi consectetur et sem sit amet ornare. Nullam sed metus orci."
+        },
+        {
+          "type": "media",
+          "style": "float: right",
+          "content": "https://via.placeholder.com/500/262626/fff"
+        },
+        {
+          "type": "text",
+          "style": "none",
+          "content": "In enim ex, volutpat vitae mauris vitae, ultricies aliquet diam. Maecenas rutrum mi a augue lobortis rutrum. Integer pellentesque sed dolor et volutpat. Suspendisse at fermentum lectus. Etiam pellentesque a ex vel consectetur. Nullam eu turpis id dui porta interdum. Mauris finibus non velit in tempor. Maecenas varius sapien sem. "
+        },
+        {
+          "type": "text",
+          "style": "none",
+          "content": "Sed iaculis, libero ac bibendum suscipit, lacus ligula laoreet nulla, nec lobortis metus lectus vel nulla. Pellentesque pharetra euismod suscipit. Vivamus ornare pellentesque nulla at malesuada. Nulla mattis vel massa eu malesuada. Fusce a convallis sem, non dapibus quam. Pellentesque cursus convallis pellentesque. Sed sit amet placerat dolor. Suspendisse in rutrum ligula, sed ullamcorper nisi. Duis ut scelerisque risus. "
+        }
+      ],
+      "author": "Christian Mendez"
     },
     {
       "id": 2,
       "image": "https://via.placeholder.com/500/262626/fff",
-      "description": "Vivamus gravida quam pretium sapien ultricies vehicula. Nullam tristique consequat augue, et venenatis augue efficitur ut. Nunc sed luctus mauris.",
       "title": "Post 2",
-      "author": "typicode"
+      "description": "Vivamus gravida quam pretium sapien ultricies vehicula. Nullam tristique consequat augue, et venenatis augue efficitur ut. Nunc sed luctus mauris.",
+      "contents": [
+        {
+          "type": "text",
+          "style": "none",
+          "content": "Integer condimentum vel nunc vel dictum. Etiam ullamcorper mi ligula, ut finibus tellus rutrum a. Phasellus faucibus elementum porttitor. Etiam tempor elit id tellus hendrerit, in aliquam nulla scelerisque. Curabitur ligula nibh, lacinia a ullamcorper id, venenatis sit amet nunc. In non orci sed lorem condimentum facilisis. Morbi consectetur et sem sit amet ornare. Nullam sed metus orci."
+        },
+        {
+          "type": "text",
+          "style": "none",
+          "content": "In enim ex, volutpat vitae mauris vitae, ultricies aliquet diam. Maecenas rutrum mi a augue lobortis rutrum. Integer pellentesque sed dolor et volutpat. Suspendisse at fermentum lectus. Etiam pellentesque a ex vel consectetur. Nullam eu turpis id dui porta interdum. Mauris finibus non velit in tempor. Maecenas varius sapien sem. "
+        },
+        {
+          "type": "text",
+          "style": "none",
+          "content": "Sed iaculis, libero ac bibendum suscipit, lacus ligula laoreet nulla, nec lobortis metus lectus vel nulla. Pellentesque pharetra euismod suscipit. Vivamus ornare pellentesque nulla at malesuada. Nulla mattis vel massa eu malesuada. Fusce a convallis sem, non dapibus quam. Pellentesque cursus convallis pellentesque. Sed sit amet placerat dolor. Suspendisse in rutrum ligula, sed ullamcorper nisi. Duis ut scelerisque risus. "
+        }
+      ],
+      "author": "Felix Carter"
     },
     {
       "id": 3,
-      "title": "Post 3",
       "image": "https://via.placeholder.com/500/262626/fff",
+      "title": "Post 3",
       "description": "Vivamus gravida quam pretium sapien ultricies vehicula. Nullam tristique consequat augue, et venenatis augue efficitur ut. Nunc sed luctus mauris.",
-      "author": "typicode"
+      "contents": [
+        {
+          "type": "text",
+          "style": "none",
+          "content": "Integer condimentum vel nunc vel dictum. Etiam ullamcorper mi ligula, ut finibus tellus rutrum a. Phasellus faucibus elementum porttitor. Etiam tempor elit id tellus hendrerit, in aliquam nulla scelerisque. Curabitur ligula nibh, lacinia a ullamcorper id, venenatis sit amet nunc. In non orci sed lorem condimentum facilisis. Morbi consectetur et sem sit amet ornare. Nullam sed metus orci."
+        },
+        {
+          "type": "text",
+          "style": "none",
+          "content": "In enim ex, volutpat vitae mauris vitae, ultricies aliquet diam. Maecenas rutrum mi a augue lobortis rutrum. Integer pellentesque sed dolor et volutpat. Suspendisse at fermentum lectus. Etiam pellentesque a ex vel consectetur. Nullam eu turpis id dui porta interdum. Mauris finibus non velit in tempor. Maecenas varius sapien sem. "
+        },
+        {
+          "type": "text",
+          "style": "none",
+          "content": "Sed iaculis, libero ac bibendum suscipit, lacus ligula laoreet nulla, nec lobortis metus lectus vel nulla. Pellentesque pharetra euismod suscipit. Vivamus ornare pellentesque nulla at malesuada. Nulla mattis vel massa eu malesuada. Fusce a convallis sem, non dapibus quam. Pellentesque cursus convallis pellentesque. Sed sit amet placerat dolor. Suspendisse in rutrum ligula, sed ullamcorper nisi. Duis ut scelerisque risus. "
+        }
+      ],
+      "author": "Jessie Lane"
     },
     {
       "id": 4,
-      "title": "Post 4",
       "image": "https://via.placeholder.com/500/262626/fff",
+      "title": "Post 4",
       "description": "Vivamus gravida quam pretium sapien ultricies vehicula. Nullam tristique consequat augue, et venenatis augue efficitur ut. Nunc sed luctus mauris.",
-      "author": "typicode"
+      "contents": [
+        {
+          "type": "text",
+          "style": "none",
+          "content": "Integer condimentum vel nunc vel dictum. Etiam ullamcorper mi ligula, ut finibus tellus rutrum a. Phasellus faucibus elementum porttitor. Etiam tempor elit id tellus hendrerit, in aliquam nulla scelerisque. Curabitur ligula nibh, lacinia a ullamcorper id, venenatis sit amet nunc. In non orci sed lorem condimentum facilisis. Morbi consectetur et sem sit amet ornare. Nullam sed metus orci."
+        },
+        {
+          "type": "text",
+          "style": "none",
+          "content": "In enim ex, volutpat vitae mauris vitae, ultricies aliquet diam. Maecenas rutrum mi a augue lobortis rutrum. Integer pellentesque sed dolor et volutpat. Suspendisse at fermentum lectus. Etiam pellentesque a ex vel consectetur. Nullam eu turpis id dui porta interdum. Mauris finibus non velit in tempor. Maecenas varius sapien sem. "
+        },
+        {
+          "type": "text",
+          "style": "none",
+          "content": "Sed iaculis, libero ac bibendum suscipit, lacus ligula laoreet nulla, nec lobortis metus lectus vel nulla. Pellentesque pharetra euismod suscipit. Vivamus ornare pellentesque nulla at malesuada. Nulla mattis vel massa eu malesuada. Fusce a convallis sem, non dapibus quam. Pellentesque cursus convallis pellentesque. Sed sit amet placerat dolor. Suspendisse in rutrum ligula, sed ullamcorper nisi. Duis ut scelerisque risus. "
+        }
+      ],
+      "author": "William Richard"
     }
   ],
   "comments": [
@@ -41,5 +114,5 @@
       "postId": 3
     }
   ],
-  "profile": { "name": "typicode" }
+  "profile": { "name": "Nicklas Olsen" }
 }

@@ -11,10 +11,10 @@ export default function FavouritesList() {
   })
 
   const getPosts = async () => {
-    const data = await fetch('http://localhost:3004/posts?_embed=comments')
+    const data = await fetch("http://localhost:3004/posts?_embed=comments")
     const dataJSON = await data.json()
     return dispatch({
-      type: 'FETCH_DATA',
+      type: "GET_POSTS",
       payload: dataJSON
     })
   }
@@ -22,13 +22,13 @@ export default function FavouritesList() {
   const toggleFavourite = post => {
     const postInFavourites = state.favourites.includes(post);
     let dispatchObj = {
-      type: 'ADD_FAV',
+      type: "ADD_FAV",
       payload: post
     }
     if (postInFavourites) {
       const favouritesWithoutPost = state.favourites.filter(fav => fav.id !== post.id)
       dispatchObj = {
-        type: 'REMOVE_FAV',
+        type: "REMOVE_FAV",
         payload: favouritesWithoutPost
       }
     }

@@ -4,6 +4,7 @@ import { Router } from '@reach/router'
 
 import App from './app'
 import DefaultPage from './components/defaultPage'
+import PostDetailsPage from './components/postDetails'
 import FavouritesList from './components/favouritesList'
 
 import * as serviceWorker from './serviceWorker'
@@ -17,6 +18,7 @@ ReactDOM.render(
 		<Router>
 			<App path='/'>
 				<DefaultPage path='/' />
+				<PostDetailsPage path='/:id' />
 				<FavouritesList path='/favs' />
 			</App>
 		</Router>

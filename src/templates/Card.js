@@ -9,10 +9,14 @@ const Card = styled.div`
     background-color: secondaryColor;
     position: relative;
     color: textColor;
-    transition: 'all 0.3s';
+    transition: all 0.3s;
 
     p {
       text-align: left;
+
+      &:last-child {
+        margin: 0;
+      }
     }
 
     pre {
@@ -26,7 +30,7 @@ const Card = styled.div`
       top: 15px;
       right: 15px;
       cursor: pointer;
-      transition: 'all 0.3s';
+      transition: all 0.3s;
 
       &:hover {
         color: primaryColor;

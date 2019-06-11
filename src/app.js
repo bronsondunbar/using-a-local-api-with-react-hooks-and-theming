@@ -2,7 +2,7 @@ import React, { useEffect, useContext } from 'react'
 import { Link } from '@reach/router'
 import { ThemeProvider } from '@xstyled/styled-components'
 
-import { Body, Header, Card, Button } from './templates/index'
+import { Body, Header, Card, Hyperlink, Button } from './templates/index'
 
 import { themeName, captilizeString } from './utils'
 
@@ -44,11 +44,13 @@ export default function App(props) {
               </li>
               <li className="nav-item">
                 {state.favourites.length > 0 &&
-                  <Link
-                    to='/favs'
-                    className="nav-link">
-                    Favourites
-                  </Link>
+                  <Hyperlink>
+                    <Link
+                      to="/favs"
+                      className="nav-link">
+                      <i className="fas fa-heart" /> Your Favourites ({state.favourites.length})
+                    </Link>
+                  </Hyperlink>
                 }
               </li>
             </ul>
