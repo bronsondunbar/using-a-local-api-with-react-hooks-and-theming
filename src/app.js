@@ -30,12 +30,14 @@ export default function App(props) {
   return (
     <ThemeProvider theme={theme(state.selectedTheme)}>
       <Body>
-        <p className="active-theme">Selected theme: {captilizeString(state.selectedTheme)}</p>
         <div className="container">
           <Header>
             <h1><Link to="/">Using a Local API with React Hooks & Theming</Link></h1>
 
             <ul className="nav justify-content-end">
+              <li className="nav-item">
+                Selected theme: {captilizeString(state.selectedTheme)}
+              </li>
               <li className="nav-item">
                 <Button
                   onClick={updateTheme}>

@@ -35,10 +35,11 @@ a:hover, a:focus {
 
 }
 
-.active-theme {
+.nav {
 
-	position: absolute;
-	right: 15px;
-	top: 15px;
+	position: fixed;
+	top: 0;
+	right: 0;
+	padding: 0 15px;
 
 }
