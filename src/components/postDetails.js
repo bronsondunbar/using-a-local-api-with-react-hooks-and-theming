@@ -60,10 +60,14 @@ export default function PostDetails() {
 
                 {post.comments.length > 0 &&
                   <Fragment>
-                    <h3>Comments</h3>
+                    <h2>Comments</h2>
 
                     {post.comments.map((comment, index) => {
-                      return <p>{comment.body}</p>
+                      return (
+                        <div key={index} className="post-comments">
+                          <p>{comment.body}</p>
+                        </div>
+                      )
                     })}
                   </Fragment>
                 }

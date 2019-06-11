@@ -109,6 +109,11 @@
       "postId": 1
     },
     {
+      "id": 2,
+      "body": "Comment 2",
+      "postId": 1
+    },
+    {
       "id": 3,
       "body": "Comment 3",
       "postId": 3

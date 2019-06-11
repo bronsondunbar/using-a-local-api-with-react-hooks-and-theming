@@ -3,6 +3,7 @@ import styled from '@xstyled/styled-components'
 const Card = styled.div`
   background-color: secondaryColor !important;
 	border-radius: defaultRadius;
+  border: none !important;
   text-align: center;
   margin: 0 0 15px 0;
 
@@ -44,8 +45,19 @@ const Card = styled.div`
       color: primaryColor;
     }
 
-    .card-comments {
+    .post-comments {
       text-align: center;
+      padding: 15px;
+      border-bottom: 1px solid #dedede;
+
+      &:last-child {
+        border: none;
+        padding: 15px 15px 0 15px;
+      }
+
+      p {
+        text-align: center;
+      }
     }
   }
 `

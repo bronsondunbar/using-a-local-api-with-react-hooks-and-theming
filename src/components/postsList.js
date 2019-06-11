@@ -42,7 +42,9 @@ export default function PostsList(props) {
 		            	Read More
 		            </Button>
 		            {post.comments.length > 0 &&
-		            	<p className="card-comments">({post.comments.length}) Comment(s)</p>
+		            	<div className="post-comments">
+		            		<p>({post.comments.length}) Comment(s)</p>
+		            	</div>
 		            }
 		          </div>
 		        </Card>
