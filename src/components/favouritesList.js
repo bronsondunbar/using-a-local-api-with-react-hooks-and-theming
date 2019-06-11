@@ -1,9 +1,9 @@
 import React, { useContext, lazy, Suspense } from 'react'
 import { Store } from '../store'
 
-import { Card } from '../components/index'
+import { Card } from '../templates/index'
 
-const PostsList = lazy(() => import('../renders/postsList'))
+const PostsList = lazy(() => import('../components/postsList'))
 
 export default function FavouritesList() {
   const { state, dispatch } = useContext(Store)

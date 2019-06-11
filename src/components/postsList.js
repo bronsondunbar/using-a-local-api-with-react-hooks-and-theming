@@ -1,7 +1,7 @@
 import React from 'react'
 import classNames from 'classnames'
 
-import { Card } from '../components/index'
+import { Card } from '../templates/index'
 
 export default function PostsList(props) {
   const { posts, toggleFavourite, favourites } = props
