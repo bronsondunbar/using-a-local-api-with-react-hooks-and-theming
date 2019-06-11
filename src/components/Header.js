@@ -6,13 +6,19 @@ const Header = styled.div`
 
   h1 {
   	color: textColor;
+
+    a {
+      color: textColor;      
+    }
   }
 
-  .card-body {
-
-  	p {
-  		margin: 0;
-  	}
+  .card {
+    .card-body {
+      p {
+        margin: 0;
+        text-align: center;
+      }
+    }
   }
 `
 export default Header

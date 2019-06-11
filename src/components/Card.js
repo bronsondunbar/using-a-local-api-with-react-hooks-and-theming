@@ -1,14 +1,19 @@
 import styled from '@xstyled/styled-components'
 
 const Card = styled.div`
+  background-color: secondaryColor !important;
 	border-radius: defaultRadius;
   text-align: center;
 
   .card-body {
-    position: relative;
     background-color: secondaryColor;
+    position: relative;
     color: textColor;
     transition: 'all 0.3s';
+
+    p {
+      text-align: left;
+    }
 
     pre {
     	background-color: backgroundColor;
@@ -31,6 +36,10 @@ const Card = styled.div`
     i.active,
     svg.active {
       color: primaryColor;
+    }
+
+    .card-comments {
+      text-align: center;
     }
   }
 `

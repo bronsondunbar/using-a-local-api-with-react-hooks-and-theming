@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom'
 import { Router } from '@reach/router'
 
 import App from './app'
+import DefaultPage from './defaultPage'
 import FavouritesList from './favouritesList'
 
 import * as serviceWorker from './serviceWorker'
@@ -14,8 +15,10 @@ import './style.css'
 ReactDOM.render(
 	<StoreProvider>
 		<Router>
-			<App path='/' />
+			<App path='/'>
+				<DefaultPage path='/' />
 				<FavouritesList path='/favs' />
+			</App>
 		</Router>
 	</StoreProvider>,
 	document.getElementById('app')

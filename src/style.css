@@ -2,6 +2,7 @@
 
 body {
 
+	position: relative;
 	background: #dddddd;
 	padding: 60px 0 0 0;
 	transition: all 0.3s;
@@ -31,5 +32,13 @@ a:hover, a:focus {
 
 	color: #262626;
 	text-decoration: none;
+
+}
+
+.active-theme {
+
+	position: absolute;
+	right: 15px;
+	top: 15px;
 
 }
