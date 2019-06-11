@@ -57,6 +57,16 @@ export default function PostDetails() {
                     </Fragment>
                   )
                 })}
+
+                {post.comments.length > 0 &&
+                  <Fragment>
+                    <h3>Comments</h3>
+
+                    {post.comments.map((comment, index) => {
+                      return <p>{comment.body}</p>
+                    })}
+                  </Fragment>
+                }
               </div>
             </Card>
           </Fragment>

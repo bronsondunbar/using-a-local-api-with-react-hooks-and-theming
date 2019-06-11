@@ -41,7 +41,9 @@ export default function PostsList(props) {
 		            	onClick={() => getPost(post.id)}>
 		            	Read More
 		            </Button>
-		            <p className="card-comments">({post.comments.length}) Comment(s)</p>
+		            {post.comments.length > 0 &&
+		            	<p className="card-comments">({post.comments.length}) Comment(s)</p>
+		            }
 		          </div>
 		        </Card>
 		      </div>
