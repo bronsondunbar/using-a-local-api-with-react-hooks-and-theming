@@ -30,8 +30,8 @@ export default function PostsList(props) {
 		    return (
 		      <div
 		        key={index}
-		        className="col">
-		        <Card>
+		        className="col-md-4">
+		        <Card className="card">
 		          <img src={post.image} className="card-img-top" alt={post.title} />
 		          <div className="card-body">
 		            <i className={favStyle(post)} onClick={() => toggleFavourite(post)}></i>
