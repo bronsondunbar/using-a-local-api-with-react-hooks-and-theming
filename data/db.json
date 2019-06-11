@@ -12,7 +12,7 @@
           "content": "Integer condimentum vel nunc vel dictum. Etiam ullamcorper mi ligula, ut finibus tellus rutrum a. Phasellus faucibus elementum porttitor. Etiam tempor elit id tellus hendrerit, in aliquam nulla scelerisque. Curabitur ligula nibh, lacinia a ullamcorper id, venenatis sit amet nunc. In non orci sed lorem condimentum facilisis. Morbi consectetur et sem sit amet ornare. Nullam sed metus orci."
         },
         {
-          "type": "media",
+          "type": "image",
           "style": "float: right",
           "content": "https://via.placeholder.com/500/262626/fff"
         },

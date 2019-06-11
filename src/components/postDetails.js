@@ -32,19 +32,34 @@ export default function PostDetails() {
     <Suspense fallback={<div>Loading...</div>}>
       {state.post && state.post.map((post, index) => {
         return (
-          <Card>
-            <div className="card-body">
-              <Fragment key={post.id}>
+          <Fragment key={post.id}>
+            <Card>
+              <div className="card-body">
                 <Header>
                   <i className={favStyle(post)} onClick={() => toggleFavourite(post)}></i>
                   <h1>{post.title}</h1>
                   <h3>{post.author}</h3>
                 </Header>
 
-                
-              </Fragment>
-            </div>
-          </Card>
+                {post.contents.length > 0 && post.contents.map((contents, index) => {
+                  let contentStyle = null
+                  if (contents.style !== "none") {
+                    contentStyle = contents.style
+                  }
+                  return (
+                    <Fragment key={index}>
+                      {contents.type === "text" &&
+                        <p style={{ contentStyle }}>{contents.content}</p>
+                      }
+                      {contents.type === "image" &&
+                        <img style={{ contentStyle }} src={contents.content} alt={post.title} />
+                      }
+                    </Fragment>
+                  )
+                })}
+              </div>
+            </Card>
+          </Fragment>
         )
       })}
     </Suspense>
