@@ -1,15 +1,26 @@
-import React, { useContext, lazy, Suspense } from 'react'
-import { Store } from './store'
+import React, { useEffect, useContext, lazy, Suspense } from 'react'
+import { Store } from '../store'
 
-import { Card } from './components/index'
-
-const PostsList = lazy(() => import('./postsList'))
+const PostsList = lazy(() => import('../renders/postsList'))
 
 export default function FavouritesList() {
   const { state, dispatch } = useContext(Store)
 
+  useEffect(() => {
+    state.posts.length === 0 && getPosts()
+  })
+
+  const getPosts = async () => {
+    const data = await fetch('http://localhost:3004/posts?_embed=comments')
+    const dataJSON = await data.json()
+    return dispatch({
+      type: 'FETCH_DATA',
+      payload: dataJSON
+    })
+  }
+
   const toggleFavourite = post => {
-    const postInFavourites = state.favourites.includes(post)
+    const postInFavourites = state.favourites.includes(post);
     let dispatchObj = {
       type: 'ADD_FAV',
       payload: post
@@ -25,20 +36,13 @@ export default function FavouritesList() {
   }
 
   const props = {
-    posts: state.favourites,
+    posts: state.posts,
     toggleFavourite: toggleFavourite,
     favourites: state.favourites
   }
 
   return (
     <Suspense fallback={<div>Loading...</div>}>
-      {state.favourites.length === 0 &&
-        <Card>
-          <div className="card-body">
-            <h2>No favourites</h2>
-          </div>
-        </Card>
-      }
       <PostsList {...props} />
     </Suspense>
   )

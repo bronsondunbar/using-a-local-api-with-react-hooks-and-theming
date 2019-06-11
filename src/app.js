@@ -1,8 +1,10 @@
-import React, { useEffect, useContext, Fragment } from 'react'
+import React, { useEffect, useContext } from 'react'
 import { Link } from '@reach/router'
 import { ThemeProvider } from '@xstyled/styled-components'
 
 import { Body, Header, Card, Button } from './components/index'
+
+import { themeName, captilizeString } from './utils'
 
 import theme from './theme'
 import { Store } from './store'
@@ -25,27 +27,19 @@ export default function App(props) {
     })
   }
 
-  const themeName = () => {
-    if (state.selectedTheme === "default") {
-      return "Dark"
-    } else if (state.selectedTheme === "alt") {
-      return "Default"
-    }
-  }
-
   return (
     <ThemeProvider theme={theme(state.selectedTheme)}>
       <Body>
-        <p className="active-theme">Selected theme: {state.selectedTheme}</p>
+        <p className="active-theme">Selected theme: {captilizeString(state.selectedTheme)}</p>
         <div className="container">
           <Header>
-            <h1><Link to="/">Using a Fake API with React Hooks & Theming</Link></h1>
+            <h1><Link to="/">Using a Local API with React Hooks & Theming</Link></h1>
 
             <ul className="nav justify-content-end">
               <li className="nav-item">
                 <Button
                   onClick={updateTheme}>
-                  Change Theme to {themeName()}
+                  Change Theme to {themeName(state.selectedTheme)}
                 </Button>
               </li>
               <li className="nav-item">

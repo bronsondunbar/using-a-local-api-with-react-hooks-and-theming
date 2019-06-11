@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom'
 import { Router } from '@reach/router'
 
 import App from './app'
-import DefaultPage from './defaultPage'
-import FavouritesList from './favouritesList'
+import DefaultPage from './renders/defaultPage'
+import FavouritesList from './renders/favouritesList'
 
 import * as serviceWorker from './serviceWorker'
 import { StoreProvider } from './store'
