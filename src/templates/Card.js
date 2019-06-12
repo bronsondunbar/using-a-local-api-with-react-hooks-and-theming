@@ -26,7 +26,8 @@ const Card = styled.div`
     pre {
     	background-color: backgroundColor;
     	padding: defaultPadding;
-    	color: altTextColor;
+    	color: textColor;
+      padding: 15px;
     }
 
     button {

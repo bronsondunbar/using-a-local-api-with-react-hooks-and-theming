@@ -58,9 +58,19 @@ export default function App(props) {
 
             <Card className="card">
               <div className="card-body">
-                <p>This example uses a fake API to get data using <a href="https://github.com/typicode/json-server" rel="noopener noreferrer" target="_blank">JSON server</a>.</p>
+                <p>This example uses a local API to get data using <a href="https://github.com/typicode/json-server" rel="noopener noreferrer" target="_blank">JSON server</a>.</p>
 
-                <p>Instead of redux it uses the newer React Hooks functionality & xstyled for theming.</p>
+                <p>Instead of redux it uses the newer <a href="https://reactjs.org/docs/hooks-intro.html" rel="noopener noreferrer" target="_blank">React Hooks</a> functionality & <a href="https://www.smooth-code.com/open-source/xstyled/" rel="noopener noreferrer" target="_blank">xstyled</a> for theming.</p>
+
+                <p>Run the following commands to run the project locally.</p>
+
+                <pre>
+                  <p>git clone https://github.com/bronsondunbar/using-a-local-api-with-react-hooks-and-theming</p>
+
+                  <p>npm install</p>
+
+                  <p>npm run</p>
+                </pre>
               </div>
             </Card>
           </Header>

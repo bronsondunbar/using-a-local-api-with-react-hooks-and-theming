@@ -50,7 +50,6 @@ const Header = styled.div`
     .card-body {
       min-height: 1px;
       p {
-        margin: 0;
         text-align: center;
       }
     }
