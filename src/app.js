@@ -2,12 +2,12 @@ import React, { useEffect, useContext } from 'react'
 import { Link } from '@reach/router'
 import { ThemeProvider } from '@xstyled/styled-components'
 
-import { Body, Header, Card, Hyperlink, Button } from './templates/index'
-
-import { themeName, captilizeString } from './utils'
-
 import theme from './theme'
 import { Store } from './store'
+
+import { themeName } from './utils'
+
+import { Body, Navbar, Header, Card, Hyperlink, Button } from './templates/index'
 
 export default function App(props) {
   const { state, dispatch } = useContext(Store)
@@ -34,28 +34,27 @@ export default function App(props) {
           <Header>
             <h1><Link to="/">Using a Local API with React Hooks & Theming</Link></h1>
 
-            <ul className="nav justify-content-end">
-              <li className="nav-item">
-                Selected theme: {captilizeString(state.selectedTheme)}
-              </li>
-              <li className="nav-item">
-                <Button
-                  onClick={updateTheme}>
-                  Change Theme to {themeName(state.selectedTheme)}
-                </Button>
-              </li>
-              <li className="nav-item">
-                {state.favourites.length > 0 &&
-                  <Hyperlink>
-                    <Link
-                      to="/favs"
-                      className="nav-link">
-                      <i className="fas fa-heart" /> Your Favourites ({state.favourites.length})
-                    </Link>
-                  </Hyperlink>
-                }
-              </li>
-            </ul>
+            <Navbar>
+              <ul className="nav justify-content-end">
+                <li className="nav-item">
+                  <Button
+                    onClick={updateTheme}>
+                    Change Theme to {themeName(state.selectedTheme)}
+                  </Button>
+                </li>
+                <li className="nav-item">
+                  {state.favourites.length > 0 &&
+                    <Hyperlink>
+                      <Link
+                        to="/favs"
+                        className="nav-link">
+                        <i className="fas fa-heart" /> Your Favourites ({state.favourites.length})
+                      </Link>
+                    </Hyperlink>
+                  }
+                </li>
+              </ul>
+            </Navbar>
 
             <Card className="card">
               <div className="card-body">

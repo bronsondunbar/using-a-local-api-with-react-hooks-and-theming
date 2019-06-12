@@ -6,7 +6,7 @@ const theme = (theme) => {
 		    secondaryColor: theme === 'default' ? '#ffffff' : '#6A6A6A',
 		    textColor: theme === 'default' ? '#262626' : '#ffffff',
 		    altTextColor: '#ffffff',
-		    backgroundColor: '#262626'
+		    backgroundColor: '#dedede',
 		  },
 		  radii: {
 		  	defaultRadius: '.25rem'

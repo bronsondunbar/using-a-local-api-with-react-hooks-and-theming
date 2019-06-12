@@ -13,6 +13,7 @@ const Card = styled.div`
     color: textColor;
     border-radius: defaultRadius;
     transition: all 0.3s;
+    min-height: 275px;
 
     p {
       text-align: left;
@@ -26,6 +27,10 @@ const Card = styled.div`
     	background-color: backgroundColor;
     	padding: defaultPadding;
     	color: altTextColor;
+    }
+
+    button {
+      margin: 5px 0;
     }
 
     i, svg {

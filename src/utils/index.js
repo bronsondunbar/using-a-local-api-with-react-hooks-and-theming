@@ -6,6 +6,16 @@ export const themeName = (selectedTheme) => {
   }
 }
 
-export const captilizeString = (string) => {
-	return string.charAt(0).toUpperCase() + string.slice(1)
+export const truncateString = (string, length, ending) => {
+  if (length == null) {
+    length = 100
+  }
+  if (ending == null) {
+    ending = '...'
+  }
+  if (string.length > length) {
+    return string.substring(0, length - ending.length) + ending
+  } else {
+    return string
+  }
 }

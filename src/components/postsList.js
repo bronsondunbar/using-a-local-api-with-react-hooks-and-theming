@@ -4,6 +4,8 @@ import classNames from 'classnames'
 
 import { Store } from '../store'
 
+import { truncateString } from '../utils'
+
 import { Button, Card } from '../templates/index'
 
 export default function PostsList(props) {
@@ -36,10 +38,10 @@ export default function PostsList(props) {
 		          <div className="card-body">
 		            <i className={favStyle(post)} onClick={() => toggleFavourite(post)}></i>
 		            <h4>{post.title}</h4>
-		            <p>{post.description}</p>
+		            <p>{truncateString(post.description, 140)}</p>
 		            <Button
 		            	onClick={() => getPost(post.id)}>
-		            	Read More
+		            	Continue reading...
 		            </Button>
 		            {post.comments.length > 0 &&
 		            	<div className="post-comments">
