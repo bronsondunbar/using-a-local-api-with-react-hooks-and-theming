@@ -69,7 +69,7 @@ export default function App(props) {
 
                   <p>npm install</p>
 
-                  <p>npm run</p>
+                  <p>npm start</p>
                 </pre>
               </div>
             </Card>
